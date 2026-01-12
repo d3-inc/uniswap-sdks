@@ -1623,6 +1623,66 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@d3-inc/uniswap-sdk-core@workspace:sdks/sdk-core":
+  version: 0.0.0-use.local
+  resolution: "@d3-inc/uniswap-sdk-core@workspace:sdks/sdk-core"
+  dependencies:
+    "@ethersproject/address": ^5.0.2
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/keccak256": 5.7.0
+    "@ethersproject/strings": 5.7.0
+    "@types/big.js": ^4.0.5
+    "@types/jest": ^24.0.25
+    babel-eslint: 10.1.0
+    big.js: ^5.2.2
+    decimal.js-light: ^2.5.0
+    eslint-config-prettier: ^9.1.0
+    eslint-config-react-app: 7.0.1
+    eslint-plugin-flowtype: 8.0.3
+    eslint-plugin-jsx-a11y: 6.10.2
+    eslint-plugin-prettier: ^3.4.1
+    eslint-plugin-react: 7.37.4
+    eslint-plugin-react-hooks: 5.2.0
+    jsbi: ^3.1.4
+    tiny-invariant: ^1.1.0
+    toformat: ^2.0.0
+    tsdx: ^0.14.1
+  languageName: unknown
+  linkType: soft
+
+"@d3-inc/uniswap-universal-router-sdk@workspace:sdks/universal-router-sdk":
+  version: 0.0.0-use.local
+  resolution: "@d3-inc/uniswap-universal-router-sdk@workspace:sdks/universal-router-sdk"
+  dependencies:
+    "@openzeppelin/contracts": 4.7.0
+    "@types/chai": ^4.3.3
+    "@types/mocha": ^9.1.1
+    "@types/node": ^18.7.16
+    "@types/node-fetch": ^2.6.2
+    "@uniswap/permit2-sdk": ^1.3.0
+    "@uniswap/router-sdk": ^2.3.3
+    "@uniswap/sdk-core": ^7.10.0
+    "@uniswap/universal-router": 2.0.0-beta.2
+    "@uniswap/v2-core": ^1.0.1
+    "@uniswap/v2-sdk": ^4.17.0
+    "@uniswap/v3-core": 1.0.0
+    "@uniswap/v3-sdk": ^3.27.0
+    "@uniswap/v4-sdk": ^1.25.2
+    bignumber.js: ^9.0.2
+    chai: ^4.3.6
+    dotenv: ^16.0.3
+    eslint-plugin-prettier: ^3.4.1
+    ethers: ^5.7.0
+    hardhat: ^2.25.0
+    prettier: ^2.4.1
+    ts-node: ^10.9.1
+    tsdx: ^0.14.1
+    tslib: ^2.3.0
+    typedoc: ^0.21.2
+    typescript: ^4.3.3
+  languageName: unknown
+  linkType: soft
+
 "@eslint-community/eslint-utils@npm:^4.2.0, @eslint-community/eslint-utils@npm:^4.7.0":
   version: 4.9.0
   resolution: "@eslint-community/eslint-utils@npm:4.9.0"
@@ -4915,33 +4975,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uniswap/sdk-core@workspace:sdks/sdk-core":
-  version: 0.0.0-use.local
-  resolution: "@uniswap/sdk-core@workspace:sdks/sdk-core"
-  dependencies:
-    "@ethersproject/address": ^5.0.2
-    "@ethersproject/bytes": ^5.7.0
-    "@ethersproject/keccak256": 5.7.0
-    "@ethersproject/strings": 5.7.0
-    "@types/big.js": ^4.0.5
-    "@types/jest": ^24.0.25
-    babel-eslint: 10.1.0
-    big.js: ^5.2.2
-    decimal.js-light: ^2.5.0
-    eslint-config-prettier: ^9.1.0
-    eslint-config-react-app: 7.0.1
-    eslint-plugin-flowtype: 8.0.3
-    eslint-plugin-jsx-a11y: 6.10.2
-    eslint-plugin-prettier: ^3.4.1
-    eslint-plugin-react: 7.37.4
-    eslint-plugin-react-hooks: 5.2.0
-    jsbi: ^3.1.4
-    tiny-invariant: ^1.1.0
-    toformat: ^2.0.0
-    tsdx: ^0.14.1
-  languageName: unknown
-  linkType: soft
-
 "@uniswap/smart-wallet-sdk@workspace:sdks/smart-wallet-sdk":
   version: 0.0.0-use.local
   resolution: "@uniswap/smart-wallet-sdk@workspace:sdks/smart-wallet-sdk"
@@ -5028,39 +5061,6 @@ __metadata:
     ts-jest: ^25.5.1
     ts-node: ^10.9.1
     typechain: ^8.1.0
-    typescript: ^4.3.3
-  languageName: unknown
-  linkType: soft
-
-"@uniswap/universal-router-sdk@workspace:sdks/universal-router-sdk":
-  version: 0.0.0-use.local
-  resolution: "@uniswap/universal-router-sdk@workspace:sdks/universal-router-sdk"
-  dependencies:
-    "@openzeppelin/contracts": 4.7.0
-    "@types/chai": ^4.3.3
-    "@types/mocha": ^9.1.1
-    "@types/node": ^18.7.16
-    "@types/node-fetch": ^2.6.2
-    "@uniswap/permit2-sdk": ^1.3.0
-    "@uniswap/router-sdk": ^2.3.3
-    "@uniswap/sdk-core": ^7.10.0
-    "@uniswap/universal-router": 2.0.0-beta.2
-    "@uniswap/v2-core": ^1.0.1
-    "@uniswap/v2-sdk": ^4.17.0
-    "@uniswap/v3-core": 1.0.0
-    "@uniswap/v3-sdk": ^3.27.0
-    "@uniswap/v4-sdk": ^1.25.2
-    bignumber.js: ^9.0.2
-    chai: ^4.3.6
-    dotenv: ^16.0.3
-    eslint-plugin-prettier: ^3.4.1
-    ethers: ^5.7.0
-    hardhat: ^2.25.0
-    prettier: ^2.4.1
-    ts-node: ^10.9.1
-    tsdx: ^0.14.1
-    tslib: ^2.3.0
-    typedoc: ^0.21.2
     typescript: ^4.3.3
   languageName: unknown
   linkType: soft

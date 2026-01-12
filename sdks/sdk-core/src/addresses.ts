@@ -20,7 +20,7 @@ type ChainAddresses = {
   v4QuoterAddress?: string
 }
 
-const DEFAULT_NETWORKS = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA]
+const DEFAULT_NETWORKS = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA, ChainId.DOMA, ChainId.DOMA_SEPOLIA]
 
 function constructSameAddressMap(address: string, additionalNetworks: ChainId[] = []): AddressMap {
   return DEFAULT_NETWORKS.concat(additionalNetworks).reduce<AddressMap>((memo, chainId) => {
@@ -457,6 +457,38 @@ const XLAYER_ADDRESSES: ChainAddresses = {
   v4QuoterAddress: '0x8928074ca1b241d8ec02815881c1af11e8bc5219',
 }
 
+const DOMA_SEPOLIA: ChainAddresses = {
+  v3CoreFactoryAddress: '0xF1398cA2C4F1113C5B618D71E4751D2E744f8369',
+  multicallAddress: '0x6ecF6BD5D49Dc9574968BC9f65768420d3220699',
+  quoterAddress: '0x823022BB81e50aBcD1f6cf9F8eE6e2557A345a9d',
+  v3MigratorAddress: '0x4407B6e7eB9c877cB1192a681a91feF340F8817d',
+  nonfungiblePositionManagerAddress: '0x3D34Ae8e53dc993C0F7Ee1AAa8020d3F0279147b',
+  mixedRouteQuoterV1Address: '0x0000000000000000000000000000000000000000',
+  // V4 is not deployed on DOMA
+  v4PoolManagerAddress: '0x0000000000000000000000000000000000000000',
+  v4PositionManagerAddress: '0x0000000000000000000000000000000000000000',
+  v4StateView: '0x0000000000000000000000000000000000000000',
+  v4QuoterAddress: '0x0000000000000000000000000000000000000000',
+  tickLensAddress: '0x436f08a0c239e9bC5db55c90CF73efC6D2E8C325',
+  swapRouter02Address: '0x7cE273df74dc43c79E5880Dd2c3eB44309236743',
+}
+
+const DOMA_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0x2e50b586d5bcD04cb6125E028A6a669f7f3cF1C2',
+  multicallAddress: '0x722Cc8B61DBC684379a6D449D91E9d4047C63432',
+  quoterAddress: '0x2023ADF9fF50219C34989baABD76A0f5cfe432f4',
+  v3MigratorAddress: '0xE73103867BBE5ed589eE9d1056a363265974f225',
+  nonfungiblePositionManagerAddress: '0xce126ca6aceBBDCe95D7b8A3Ce637951640811E0',
+  mixedRouteQuoterV1Address: '0x0000000000000000000000000000000000000000',
+  // V4 is not deployed on DOMA
+  v4PoolManagerAddress: '0x0000000000000000000000000000000000000000',
+  v4PositionManagerAddress: '0x0000000000000000000000000000000000000000',
+  v4StateView: '0x0000000000000000000000000000000000000000',
+  v4QuoterAddress: '0x0000000000000000000000000000000000000000',
+  tickLensAddress: '0x0fDad9964465900C0e835D930B44609F6cE716DA',
+  swapRouter02Address: '0x50cDfe221F0B478b7F58319d7b42cf61e5d904A9',
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -488,6 +520,8 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.SONEIUM]: SONEIUM_ADDRESSES,
   [ChainId.MONAD]: MONAD_ADDRESSES,
   [ChainId.XLAYER]: XLAYER_ADDRESSES,
+  [ChainId.DOMA_SEPOLIA]: DOMA_SEPOLIA,
+  [ChainId.DOMA]: DOMA_ADDRESSES,
 }
 
 /* V3 Contract Addresses */

@@ -1,0 +1,42 @@
+name: Release Doma Forked Packages
+
+on:
+  push:
+    branches:
+      - beta
+      - main
+
+jobs:
+  release:
+    name: Release
+    environment:
+      name: production
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+        with:
+          submodules: "true"
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7
+        with:
+          cache: yarn
+          node-version: 22
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@d3-inc"
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      - name: Build SDK's
+        run: yarn g:build
+
+      - name: Release Needed SDK's
+        run: yarn g:release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
