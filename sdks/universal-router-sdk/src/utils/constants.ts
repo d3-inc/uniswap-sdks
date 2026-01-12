@@ -376,6 +376,34 @@ export const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
       },
     },
   },
+  // doma sepolia
+  [97476]: {
+    weth: '0x4200000000000000000000000000000000000006',
+    routerConfigs: {
+      [UniversalRouterVersion.V1_2]: {
+        address: '0x7BD025f880C4D00AD009C70792Cbd0418556D667',
+        creationBlock: 9462237,
+      },
+      [UniversalRouterVersion.V2_0]: {
+        address: '0x7BD025f880C4D00AD009C70792Cbd0418556D667',
+        creationBlock: 9462237,
+      },
+    },
+  },
+  // doma
+  [97477]: {
+    weth: '0x4200000000000000000000000000000000000006',
+    routerConfigs: {
+      [UniversalRouterVersion.V1_2]: {
+        address: '0x5089863E97196773038f98459262D866f2281f58',
+        creationBlock: 1444272,
+      },
+      [UniversalRouterVersion.V2_0]: {
+        address: '0x5089863E97196773038f98459262D866f2281f58',
+        creationBlock: 1444272,
+      },
+    },
+  },
 }
 
 export const UNIVERSAL_ROUTER_ADDRESS = (version: UniversalRouterVersion, chainId: number): string => {
