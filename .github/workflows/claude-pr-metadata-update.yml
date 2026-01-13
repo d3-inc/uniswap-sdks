@@ -13,9 +13,12 @@ name: "[claude] Generate PR Title & Description"
 # - Conventional commit format enforcement
 # - Preserves user content outside of marked sections
 
+# on:
+#   pull_request:
+#     types: [opened, synchronize, ready_for_review]
+
 on:
-  pull_request:
-    types: [opened, synchronize, ready_for_review]
+  workflow_dispatch: {}
 
 # Concurrency: Cancel in-flight runs for the same PR
 concurrency:

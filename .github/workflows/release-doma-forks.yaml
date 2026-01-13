@@ -1,0 +1,54 @@
+name: Release Doma Forked Packages
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  release:
+    name: Release
+    environment:
+      name: production
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+        with:
+          submodules: "true"
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7
+        with:
+          cache: yarn
+          node-version: 22
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@d3-inc"
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      - name: Configure git username
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@users.noreply.github.com'
+
+      - name: Build SDK's
+        run: yarn g:build
+
+      - name: Publish sdk-core
+        run: npm publish
+        working-directory: ./sdks/sdk-core
+        continue-on-error: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish universal-router-sdk
+        run: npm publish
+        working-directory: ./sdks/universal-router-sdk
+        continue-on-error: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

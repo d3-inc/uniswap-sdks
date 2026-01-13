@@ -1,5 +1,6 @@
 {
-  "name": "@uniswap/sdk-core",
+  "name": "@d3-inc/uniswap-sdk-core",
+  "version": "7.10.1-doma.1",
   "description": "⚒️ An SDK for building applications on top of Uniswap V3",
   "repository": "https://github.com/Uniswap/sdks.git",
   "keywords": [
