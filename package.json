@@ -13,7 +13,7 @@
     "semantic-release": "^25.0.1",
     "semantic-release-monorepo": "8.0.2",
     "syncpack": "^8.5.14",
-    "turbo": "1.10.16"
+    "turbo": "2.9.14"
   },
   "engines": {
     "node": ">=10",
